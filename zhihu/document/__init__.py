@@ -101,11 +101,6 @@ def format_path(path):
 
 def format_file_name(suffix, *part_name):
     """返回正确的文件名"""
-    try:
-        os.makedirs(config.wh())
-    except OSError:
-        pass
-
     names = format_path('-'.join(part_name))
     if (suffix is not None) and (suffix != ''):
         file = os.path.join(config.wh(), '%s.%s' % (names, suffix))
