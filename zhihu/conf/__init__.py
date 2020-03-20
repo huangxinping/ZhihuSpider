@@ -53,8 +53,12 @@ class Config:
             assert dw != ''
             return dw
         except (KeyError, AssertionError):
-            self.setting('running/default_wh',
-                         os.path.join(os.path.expanduser('~'), r'Documents\zhihuSpider'))
+            dfp = os.path.join(os.path.expanduser('~'), r'Documents\zhihuSpider')
+            self.setting('running/default_wh', dfp)
+            try:
+                os.makedirs(dfp)
+            except FileExistsError:
+                pass
             return self.default_wh()
 
     def _warehouse(self, path):
