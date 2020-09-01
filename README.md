@@ -23,8 +23,8 @@ pygments
 
 在命令行输入`zhihu -h`获得帮助信息：
 
-```powershell
->>>zhihu -h
+```
+zhihu -h
 usage: zhihu [-u U] [-r R] [-w W] [-f F] [-cd] [-cso] [-dg] [-cv] [-log]
              [-log2] [-v] [-h]
 
@@ -47,8 +47,8 @@ optional arguments:
 
 获取“如何看待2020年非洲蝗虫灾害？”（20200215热榜问题） **前2%** 个答案并下载答案中的图片：
 
-```powershell
->>>zhihu -u https://www.zhihu.com/question/371430700 -dg
+```
+zhihu -u https://www.zhihu.com/question/371430700 -dg
 ```
 有两种方式支持批量获内容，第一种：将问题（答案、文章、专栏等）链接放置在文本文件(如batch.txt)中，每行一个链接。如：
 
@@ -60,13 +60,13 @@ https://www.zhihu.com/question/371430702
 https://www.zhihu.com/question/371430703
 ```
 爬虫命令：
-```powershell
+```
 zhihu -r batch.txt
 ```
 
 第二种：使用`""`将多个链接引起，使它们成为一个字符串，用`空格`或`#`分隔链接，如：
 
-```powershell
+```
 zhihu -u "https://www.zhihu.com/question/371430702#https://www.zhihu.com/question/371430702 https://www.zhihu.com/question/371430703"
 ```
 
