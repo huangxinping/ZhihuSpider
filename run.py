@@ -4,7 +4,7 @@ from zhihu.conf import config
 # ### 程序设置（务必设置存储路径） #### #
 
 # 默认存储路径为用户文档，开发环境下可设置为用户桌面或其他路径，方便查看结果
-config.warehouse(r'C:\Users\{}\Desktop'.format('??'))
+config.warehouse(r'/Users/{}/Desktop'.format('huangxinping'))
 
 config.setting('running/file_type', 0)
 config.setting('running/cached', False)

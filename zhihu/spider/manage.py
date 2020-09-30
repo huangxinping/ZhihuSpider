@@ -127,7 +127,8 @@ class QuestionManage(AnswerManage):
         config.warehouse('~question/%s' % format_path(self.title))
 
     def run(self):
-        self._run(size=0.02)
+        # self._run(size=0.02) # 默认是 2%，改为 100%，哈哈哈
+        self._run(size=-1)
 
 
 class ArticleManage(ItemManage):

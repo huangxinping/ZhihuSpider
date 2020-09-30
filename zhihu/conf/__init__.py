@@ -1,7 +1,7 @@
 import os
 import pickle
 
-import zhihu.conf.config as zcc
+from zhihu.conf import config as zcc
 
 __all__ = ['config']
 
@@ -53,7 +53,7 @@ class Config:
             assert dw != ''
             return dw
         except (KeyError, AssertionError):
-            dfp = os.path.join(os.path.expanduser('~'), r'Documents\zhihuSpider')
+            dfp = os.path.join(os.path.expanduser('~'), r'Documents/zhihuSpider')
             self.setting('running/default_wh', dfp)
             try:
                 os.makedirs(dfp)
@@ -117,7 +117,7 @@ config: Config = Config()
 if __name__ == '__main__':
     a = config.warehouse()
     print(a)
-    config.warehouse(r'C:\Users\Milloy\Desktop')
+    config.warehouse(r'/Users/huangxinping/Desktop')
     config.warehouse('~collection/菜汤')
     a = config.warehouse()
     print(a)
