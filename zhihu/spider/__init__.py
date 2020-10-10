@@ -26,7 +26,7 @@ def load_function(name):
 @HandleError.catch_error
 def start_with_id(item_id, item_type):
     load_function(item_type)(item_id)
-    print('保存目录：%s' % config.wh())
+    #print('保存目录：%s' % config.wh())
 
 
 def start(item_link):
